@@ -41,10 +41,10 @@ function reducer(arr, selector) {
   const reduce = arr.reduce((acc, val, idx) => {
     selector.name == "ul"
       ? (acc += `<li>${val}</li>`)
-      : (acc += `<tr>
-              <td>${idx + 1}</td>
-              <td>${val.name}</td>
-              <td>${val.age}</td>
+      : (acc += `<tr>	
+              <td>${idx + 1}</td>	
+              <td>${val.name}</td>	
+              <td>${val.age}</td>	
             </tr>`);
 
     return acc;

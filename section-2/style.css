@@ -24,28 +24,43 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .box {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 2px solid #eaeaea2f;
   margin: 0 1.2rem;
+  height: 300px;
+  width: 300px;
+  border: 1px solid #eaeaea8c;
+
   /* border-radius: 5px; */
   -webkit-box-shadow: 9px 10px 0px -2px rgba(231, 206, 91, 0.75);
   -moz-box-shadow: 9px 10px 0px -2px rgba(231, 206, 91, 0.75);
   box-shadow: 9px 10px 0px -2px rgba(231, 206, 91, 0.75);
 }
 
-.col {
-  flex: 1;
+.start {
+  margin-bottom: 2rem;
 }
 
 table {
   width: 100%;
+  table-layout: fixed;
   display: table;
-  border-collapse: collapse;
   border-spacing: 0;
   font-size: 12px;
+}
+
+.stripped {
+  width: 100%;
+  table-layout: fixed;
+  display: table;
+  border-spacing: 0;
+  font-size: 12px;
+  border-collapse: collapse;
 }
 
 thead {
@@ -71,63 +86,4 @@ th {
   text-align: left;
   vertical-align: middle;
   border-radius: 2px;
-}
-
-p {
-  text-align: center;
-  padding: 10px 10px;
-
-  font-size: 2rem;
-}
-
-.one,
-.two,
-.three {
-  position: relative;
-  height: 300px;
-  width: 300px;
-  border: 1px solid #eaeaea8c;
-}
-
-.number_one,
-.number_two,
-.number_three {
-  color: #2b2b2b;
-  padding: 20px;
-  height: 25px;
-  width: 25px;
-  background-color: rgb(192, 182, 87);
-  border-radius: 50%;
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: -15px 0 0 -20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-ul {
-  list-style: none;
-}
-
-li {
-  width: 100%;
-  margin: 5px auto;
-}
-
-.heading {
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.4rem;
-  margin-bottom: 3rem;
-  font-weight: 100;
-}
-.caption {
-  transition: 0.3s;
-}
-
-.caption:hover {
-  color: #e08888;
 }
