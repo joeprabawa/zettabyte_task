@@ -15,7 +15,7 @@ const data = [
       {
         name: "Internet",
         price: 70,
-        dueDate: "March 10tt"
+        dueDate: "March 10th"
       }
     ]
   },
@@ -35,7 +35,7 @@ const data = [
       {
         name: "Internet",
         price: 70,
-        dueDate: "March 10tt"
+        dueDate: "March 10th"
       }
     ]
   }
@@ -48,7 +48,7 @@ const row = document.querySelector(".row");
 reducer(data, row);
 
 function reducer(arr, selector) {
-  const reduce = arr.reduce((acc, val) => {
+  const reduce = arr.reduce((acc, val, idx) => {
     let string = "";
     val.data.forEach(el => {
       return (string += `
@@ -61,6 +61,7 @@ function reducer(arr, selector) {
 
     acc += `
      <div class="box">
+     <span class="number_${idx == 0 ? "one" : "two"}">${idx + 1}</span>
           <h4 class="start">March Bills</h4>
           <table class="${val.name == "one" ? "" : "stripped"}">
             <thead>
